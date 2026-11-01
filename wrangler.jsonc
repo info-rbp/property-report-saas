@@ -24,11 +24,11 @@
   "r2_buckets": [
     {
       "binding": "FILES",
-      "bucket_name": "property-report-saas-files"
+      "bucket_name": "property-report-saas-staging-files"
     },
     {
       "binding": "BACKUPS",
-      "bucket_name": "property-report-saas-backups"
+      "bucket_name": "property-report-saas-staging-backups"
     }
   ],
   "observability": {
