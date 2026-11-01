@@ -16,6 +16,13 @@ test('sign-in binds single-use links to the requesting browser and stores only t
     r = await f.request('/api/auth/verify', { method: 'POST', body: { token: challenge.token }, cookie: challenge.flowCookie });
     assert.equal(r.status, 400);
 });
+test('registration suspension preserves sign-in for existing users but blocks strangers', async (t) => {
+    const f = fixture(t);
+    await f.login('existing@example.test');
+    f.env.PUBLIC_SIGNUP_ENABLED = 'false';
+    assert.equal((await f.request('/api/auth/start', { method: 'POST', body: { email: 'existing@example.test' } })).status, 202);
+    assert.equal((await f.request('/api/auth/start', { method: 'POST', body: { email: 'new-person@example.test' } })).status, 503);
+});
 test('expired sign-in links cannot create a session', async (t) => {
     const f = fixture(t), c = await f.beginLogin('owner@example.test');
     await f.db.prepare('UPDATE login_challenges SET expires_at=?').bind(nowSeconds() - 1).run();
