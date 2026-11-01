@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+/*
+  Shared styles for the on-screen report preview.
+  Issued PDFs are generated independently by the deterministic jsPDF renderer.
+*/
+.pdf-page {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #171717;
+  background-color: #ffffff;
+}
+
+.pdf-page table {
+  border-color: #94a3b8;
+}
+
+.pdf-page th,
+.pdf-page td {
+  border-color: #cbd5e1;
+}
+
+@media print {
+  body {
+    background: #ffffff !important;
+  }
+  .pdf-page {
+    box-shadow: none !important;
+    margin: 0 !important;
+    page-break-after: always;
+    break-after: page;
+  }
+}

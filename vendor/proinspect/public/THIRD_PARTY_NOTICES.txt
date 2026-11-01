@@ -1,0 +1,19 @@
+ProInspect Property Report Creation Tool - Third-Party Notices
+
+HEIC / HEIF conversion
+----------------------
+This application uses heic-to version 1.5.2, licensed under the
+GNU Lesser General Public License version 3.0 or later.
+
+Author / upstream source: https://github.com/hoppergee/heic-to
+Upstream release: https://github.com/hoppergee/heic-to/tree/v1.5.2
+License text: /licenses/heic-to-LGPL-3.0.txt
+Corresponding license information: https://www.gnu.org/licenses/lgpl-3.0.html
+
+heic-to contains or uses libheif and HEIF/HEVC decoding components,
+which are subject to their own upstream copyright and licensing terms.
+See https://github.com/strukturag/libheif and the heic-to upstream source.
+
+The HEIC/HEIF conversion module is loaded on demand in a separate
+browser-side JavaScript asset. Original HEIC/HEIF files are converted
+locally to standard JPEG before ProInspect upload and report processing.
