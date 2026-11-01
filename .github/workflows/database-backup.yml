@@ -1,0 +1,37 @@
+name: Independent encrypted database backup
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '15 18 * * *'
+permissions:
+  contents: read
+jobs:
+  backup:
+    if: vars.BACKUP_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment: independent-backup
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - name: Export, encrypt, archive and verify receipts
+        run: node scripts/database-backup.mjs
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.BACKUP_CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.BACKUP_CLOUDFLARE_ACCOUNT_ID }}
+          BACKUP_DATABASE: ${{ vars.BACKUP_DATABASE }}
+          ARCHIVE_ENCRYPTION_KEY: ${{ secrets.ARCHIVE_ENCRYPTION_KEY }}
+          ARCHIVE_UPLOAD_KEY: ${{ secrets.ARCHIVE_UPLOAD_KEY }}
+          ARCHIVE_KEY_ID: ${{ vars.ARCHIVE_KEY_ID }}
+          ARCHIVE_ORIGIN: ${{ vars.ARCHIVE_ORIGIN }}
+          APP_ORIGIN: ${{ vars.APP_ORIGIN }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: encrypted-database-backup-receipt
+          path: artifacts/database-backup-receipt.json
+          retention-days: 30
+# Disabled until BACKUP_ENABLED is approved. Never upload plaintext SQL or encryption keys.
