@@ -1,0 +1,19 @@
+{
+  "name": "property-report-saas",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "engines": {"node": ">=22.16.0"},
+  "scripts": {
+    "prepare:engine": "node scripts/prepare-engine.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node scripts/check.mjs",
+    "build": "node scripts/prepare-engine.mjs && vite build && node scripts/build-server-renderer.mjs",
+    "dev": "wrangler dev",
+    "types": "wrangler types",
+    "deploy:check": "npm run build && wrangler deploy --dry-run",
+    "release:check": "node scripts/release-check.mjs"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
