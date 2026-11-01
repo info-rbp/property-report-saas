@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-01",
+  "localTests": {
+    "total": 102,
+    "passed": 102,
+    "failed": 0
+  },
+  "pdfFixtures": 27,
+  "typecheck": true,
+  "frontendAndRendererBuild": true,
+  "wranglerDryRun": true,
+  "localWorkersRuntime": true,
+  "localBrowser": "blocked by environment policy; run in CI",
+  "productionDeployment": false,
+  "liveBilling": false,
+  "legalCertification": false
+}

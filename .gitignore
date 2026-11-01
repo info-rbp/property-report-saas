@@ -1,0 +1,14 @@
+node_modules/
+generated/
+dist/
+.wrangler/
+artifacts/
+backups/
+.dev.vars
+.env
+.env.*
+!.env.example
+*.log
+worker-configuration.d.ts
+dependency-audit.json
+dependency-tree.json

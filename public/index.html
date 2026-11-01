@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en-AU">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Property Reports Cloud - Development Candidate</title><link rel="stylesheet" href="/styles.css"></head>
+<body>
+<header><div><span class="eyebrow">PROPERTY REPORTS CLOUD</span><h1>Workspace console</h1></div><button id="logout" hidden>Sign out</button></header>
+<div class="notice"><strong>Development candidate.</strong> Workspace controls are implemented. Inspection editing, server-generated PDFs, delivery, signing and opt-in encrypted offline drafts are implemented. Live launch requires the release checks.</div>
+<main>
+<p id="message" role="status" aria-live="polite"></p>
+<section id="login" class="card"><h2>Sign in</h2><p>Receive a single-use sign-in link. Open it in the same browser.</p><form id="login-form"><label>Email address<input type="email" name="email" autocomplete="email" required></label><button>Send sign-in link</button></form></section>
+<section id="account" hidden>
+<div class="toolbar"><label>Workspace<select id="workspace-select"></select></label><button id="new-workspace">Create workspace</button></div>
+<nav aria-label="Workspace navigation"><button data-tab="properties">Properties</button><button data-tab="team">Team</button><button data-tab="branding">Branding</button><button data-tab="billing">Billing</button><button data-tab="recovery">Recovery / export</button><button data-tab="readiness">Release status</button></nav>
+<div id="content"></div>
+</section>
+</main>
+<dialog id="workspace-dialog"><form id="workspace-form"><h2>Create workspace</h2><label>Business or workspace name<input name="name" maxlength="120" required></label><p>Read the <a href="/terms.html" target="_blank" rel="noopener">terms</a> and <a href="/privacy.html" target="_blank" rel="noopener">privacy notice</a>. Onboarding remains blocked while they are unapproved.</p><label class="checkbox"><input type="checkbox" name="accepted" required> I accept the current terms and acknowledge the privacy notice.</label><div class="toolbar"><button>Create</button><button type="button" id="cancel-workspace">Cancel</button></div></form></dialog>
+<footer>Customer data is workspace-scoped. No live ProInspect resources are configured.</footer>
+<script type="module" src="/app.mjs"></script>
+</body></html>

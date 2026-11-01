@@ -1,0 +1,178 @@
+{
+  "source": "https://www.consumerprotection.wa.gov.au/system/files/documents/2025-07/form1propertyconditionreport.docx",
+  "retrieved": "2026-11-01",
+  "sha256": "3e39e2346956bb6d913ac3ae2c28f3768157a17b8228b4eee1cea0319790d969",
+  "sections": [
+    [
+      "ENTRY",
+      [
+        "front door",
+        "screen door/security door",
+        "walls/picture hooks",
+        "windows/screens",
+        "ceiling",
+        "light fittings",
+        "blinds/curtains",
+        "power points",
+        "floorcoverings"
+      ]
+    ],
+    [
+      "LOUNGE ROOM",
+      [
+        "doors/doorway frames",
+        "walls/picture hooks",
+        "windows/screens",
+        "ceiling",
+        "light fittings",
+        "blinds/curtains",
+        "TV/power points",
+        "floorcoverings"
+      ]
+    ],
+    [
+      "DINING ROOM",
+      [
+        "doors/doorway frames",
+        "walls/picture hooks",
+        "windows/screens",
+        "ceiling",
+        "light fittings",
+        "blinds/curtains",
+        "power points",
+        "floorcoverings"
+      ]
+    ],
+    [
+      "KITCHEN",
+      [
+        "Doors/doorway frames",
+        "walls/picture hooks",
+        "windows/screens",
+        "ceiling",
+        "light fittings",
+        "blinds/curtains",
+        "power points",
+        "floorcoverings",
+        "cupboards/drawers",
+        "bench tops/tiling",
+        "sink/taps",
+        "stove top/hot plates",
+        "oven/griller",
+        "exhaust fan/range hood"
+      ]
+    ],
+    [
+      "EACH BEDROOM",
+      [
+        "doors/doorway frames",
+        "walls/picture hooks",
+        "windows/screens",
+        "ceiling",
+        "light fittings",
+        "blinds/curtains",
+        "power points",
+        "floorcoverings"
+      ]
+    ],
+    [
+      "EACH BATHROOM",
+      [
+        "doors/doorway frames",
+        "walls/tiles",
+        "windows/screens",
+        "ceiling",
+        "light fittings",
+        "blinds/curtains",
+        "power points",
+        "floorcoverings",
+        "bath/taps",
+        "shower/screen/taps",
+        "wash basin/taps",
+        "mirror/cabinet/vanity",
+        "towel rails",
+        "toilet/cistern/seat",
+        "toilet roll holder",
+        "heating/exhaust fan/vent"
+      ]
+    ],
+    [
+      "LAUNDRY",
+      [
+        "doors/doorway frames",
+        "walls/tiles",
+        "windows/screens",
+        "ceiling",
+        "light fittings",
+        "blinds/curtains",
+        "power points",
+        "floorcoverings",
+        "washing machine taps",
+        "exhaust fan/vent",
+        "washing tub"
+      ]
+    ],
+    [
+      "SECURITY/ SAFETY",
+      [
+        "smoke alarms",
+        "electrical safety switch",
+        "keys/other opening devices"
+      ]
+    ],
+    [
+      "GENERAL",
+      [
+        "garden",
+        "lawn/edges",
+        "letterbox/street number",
+        "water tanks/septic tanks",
+        "garbage bins",
+        "paving/driveways",
+        "clothesline",
+        "garage/carport/storeroom",
+        "garden shed",
+        "hot water system",
+        "gutters/downpipes"
+      ]
+    ]
+  ],
+  "columns": [
+    "Clean",
+    "Undamaged",
+    "Working",
+    "Tenant agrees",
+    "Comments"
+  ],
+  "instructions": [
+    "Before the tenancy begins, the lessor or the property manager should inspect the residential premises and record the condition of the premises by indicating whether the particular room item is clean, undamaged and working by placing \u201cY\u201d (YES) or \u201cN\u201d(NO) in the appropriate column. Where necessary, comments should be included in the report.",
+    "Two copies of the report, which has been filled out and signed by the lessor or the property manager, must be given to the tenant within 7 days of the start of the tenancy as specified in the residential tenancy agreement.",
+    "As soon as possible after the tenant receives the property condition report, the tenant should inspect the residential premises and complete the tenant section on both copies of the report. The tenant indicates agreement or disagreement with the condition indicated by the lessor or the property manager by placing \u201cY\u201d (YES) or \u201cN\u201d (NO) in the appropriate column and by making any appropriate comments on the form.",
+    "The tenant must return one copy of the completed property condition report to the lessor or the property manager within 7 days after receiving it. The tenant should keep the second copy of the property condition report.",
+    "If photographs or video recordings are taken at the time the property inspection is carried out, it is recommended that all photographs or video recordings are signed and dated by all parties. NOTE: Photographs and/or video recordings are not a substitute for accurate written descriptions of the condition of the property.",
+    "As soon as practicable, and in any event within 14 days after the termination of the tenancy agreement, the lessor or the property manager should complete a property condition report, indicating the condition of the premises at the end of the tenancy. This should be done in the presence of the tenant, unless the tenant has been given a reasonable opportunity to be present and has not attended the inspection."
+  ],
+  "notes": [
+    "This property condition report is an important record of the condition of the residential premises when the tenancy begins. It may be used as evidence of the state of repair or general condition of the premises at the commencement of the tenancy if there is a dispute, particularly about the return of the security bond money and any damage to the premises. It is important to complete the property condition report accurately.",
+    "A property condition report must be filled out whether or not a security bond is paid.",
+    "At the end of the tenancy the premises must be inspected and the condition of the premises at that time will be compared to that stated in the original property condition report.",
+    "A tenant is not responsible for fair wear and tear to the premises. Fair wear and tear is a general term for anything that occurs through ordinary use such as the carpet becoming worn in frequently used areas. Wilful and intentional damage, or damage caused by negligence, is not fair wear and tear.",
+    "If you do not have enough space on the report, attach a separate sheet. All attachments should be signed and dated by all of the parties to the residential tenancy agreement.",
+    "Information about the rights and responsibilities of lessors and tenants may be obtained by contacting the Department of Local Government, Industry Regulation and Safety on 1300 30 40 54 or visiting www.consumerprotection.wa.gov.au."
+  ],
+  "contactNotice": "For further information about tenancy rights, refer to the Residential Tenancies Act 1987 or contact the Department of Local Government, Industry Regulation and Safety on 1300 30 40 54 or www.consumerprotection.wa.gov.au. For Translating and Interpreting Services please telephone TIS on 13 14 50 and ask to speak to the Department of Local Government, Industry Regulation and Safety (1300 30 40 54) for assistance.",
+  "workDateLabels": [
+    "Painting of premises (external):",
+    "Painting of premises (internal):",
+    "Floorcoverings laid:",
+    "Floorcoverings professionally cleaned:"
+  ],
+  "signatureLabels": [
+    "Signed by the LESSOR/PROPERTY MANAGER",
+    "Signed by the TENANT"
+  ],
+  "attachmentNote": "Note: Further items and comments may be recorded on a separate sheet, signed by the lessor/property manager and the tenant, and attached to this report.",
+  "transcriptionNormalizations": [
+    "Whitespace between Word text runs normalised; \"7days\" rendered as \"7 days\". No substantive words removed."
+  ]
+}

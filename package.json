@@ -10,11 +10,14 @@
     "prepare:engine": "node scripts/prepare-engine.mjs",
     "test": "node --test tests/*.test.mjs",
     "check": "node scripts/check.mjs",
-    "build": "node scripts/prepare-engine.mjs && vite build && node scripts/build-server-renderer.mjs",
+    "build": "node scripts/prepare-engine.mjs && vite build && node scripts/build-server-renderer.mjs && node scripts/build-service-worker.mjs",
     "dev": "wrangler dev",
     "types": "wrangler types",
     "deploy:check": "npm run build && wrangler deploy --dry-run",
-    "release:check": "node scripts/release-check.mjs"
+    "release:check": "node scripts/release-check.mjs",
+    "typecheck": "tsc --noEmit",
+    "test:runtime": "node scripts/runtime-check.mjs",
+    "licenses": "node scripts/dependency-inventory.mjs"
   },
   "dependencies": {
     "heic-to": "1.5.2",
@@ -37,6 +40,7 @@
     "tailwindcss": "4.3.3",
     "typescript": "7.0.2",
     "vite": "8.3.5",
-    "wrangler": "4.156.0"
+    "wrangler": "4.156.0",
+    "miniflare": "5.20261023.3-beta"
   }
 }

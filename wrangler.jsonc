@@ -1,0 +1,56 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "property-report-saas",
+  "main": "src/server/index.mjs",
+  "compatibility_date": "2026-10-30",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "workers_dev": false,
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "run_worker_first": true,
+    "not_found_handling": "single-page-application"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "property-report-saas",
+      "database_id": "00000000-0000-0000-0000-000000000000",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "FILES",
+      "bucket_name": "property-report-saas-files"
+    },
+    {
+      "binding": "BACKUPS",
+      "bucket_name": "property-report-saas-backups"
+    }
+  ],
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  },
+  "vars": {
+    "ENVIRONMENT": "staging",
+    "APP_ORIGIN": "https://configure-a-new-domain.example.invalid",
+    "PUBLIC_SIGNUP_ENABLED": "false",
+    "LAUNCH_APPROVED": "false",
+    "TERMS_VERSION": "unapproved",
+    "PRIVACY_VERSION": "unapproved",
+    "RELEASE_ID": "unreleased",
+    "STRIPE_API_VERSION": "2026-09-30.endive",
+    "STRIPE_MODE": "test",
+    "STRIPE_TAX_MODE": "unconfigured",
+    "ENABLE_STAGING_ISSUE": "false"
+  },
+  "triggers": {
+    "crons": [
+      "*/5 * * * *"
+    ]
+  }
+}

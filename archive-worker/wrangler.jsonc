@@ -1,0 +1,20 @@
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  "name": "property-report-independent-archive",
+  "main": "index.mjs",
+  "compatibility_date": "2026-10-30",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "workers_dev": false,
+  "r2_buckets": [
+    {
+      "binding": "ARCHIVE",
+      "bucket_name": "property-report-independent-archive"
+    }
+  ],
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "repository": "info-rbp/Property-Report-Tool",
+  "commit": "ed55b4409d7caf668b4cb62c8a27fc79a8d2ce68",
+  "sourceIncluded": true,
+  "reusableEditorAndRendererIntegrated": true,
+  "originalWorkerDeployed": false,
+  "originalProductionResourcesUsed": false,
+  "adapter": "scripts/prepare-engine.mjs",
+  "review": "docs/INTEGRATION_PLAN.md",
+  "productionAcceptanceComplete": false
+}
