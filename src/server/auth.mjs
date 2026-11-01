@@ -19,10 +19,14 @@ export async function currentUser(request, env) {
 export async function authRoutes(request, env, mailer = sendEmail) {
     const path = new URL(request.url).pathname;
     if (path === '/api/auth/start' && request.method === 'POST') {
-        if (env.PUBLIC_SIGNUP_ENABLED !== 'true')
-            throw new HttpError(503, 'Public onboarding is not open.');
         const body = await jsonBody(request, 8192);
         const email = emailAddress(body.email);
+        // Suspending new registrations must not lock out existing customers.
+        // Existing users still need a verified, single-use email challenge.
+        if (env.PUBLIC_SIGNUP_ENABLED !== 'true') {
+            const existing = await env.DB.prepare('SELECT id FROM users WHERE email=?').bind(email).first();
+            if (!existing) throw new HttpError(503, 'New customer registration is not open.');
+        }
         const ip = request.headers.get('cf-connecting-ip') || 'local';
         await rateLimit(env.DB, `login-ip:${await sha256(ip)}`, 20);
         await rateLimit(env.DB, `login-email:${await sha256(email)}`, 5);
