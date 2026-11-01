@@ -1,0 +1,32 @@
+name: Capture authoritative Form 1 reference
+on:
+  push:
+    paths: ['.github/workflows/form1-reference.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reference:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch current published reference without modifying it
+        run: |
+          curl --fail --location --retry 3 'https://www.consumerprotection.wa.gov.au/system/files/documents/2025-07/form1propertyconditionreport.docx' --output form1-official.docx
+          python3 - <<'PY'
+          import zipfile, hashlib, json, xml.etree.ElementTree as E
+          from pathlib import Path
+          p=Path('form1-official.docx')
+          ns={'w':'http://schemas.openxmlformats.org/wordprocessingml/2006/main'}
+          root=E.fromstring(zipfile.ZipFile(p).read('word/document.xml'))
+          txt=lambda e: ' '.join(x.text or '' for x in e.findall('.//w:t',ns))
+          tables=[[[txt(c) for c in r.findall('w:tc',ns)] for r in t.findall('w:tr',ns)] for t in root.findall('.//w:tbl',ns)]
+          result={'source':'https://www.consumerprotection.wa.gov.au/system/files/documents/2025-07/form1propertyconditionreport.docx','sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'paragraphs':[txt(x) for x in root.findall('.//w:p',ns)],'tables':tables}
+          Path('form1-reference.json').write_text(json.dumps(result,ensure_ascii=False,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: authoritative-form1-reference
+          path: |
+            form1-official.docx
+            form1-reference.json
+          retention-days: 3
