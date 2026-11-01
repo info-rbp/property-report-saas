@@ -1,17 +1,24 @@
 {
   "date": "2026-11-01",
-  "localTests": {
-    "total": 102,
-    "passed": 102,
-    "failed": 0
-  },
+  "verifiedApplicationCommit": "5b0cc618c4c11172eeed48b1e581d8357ab42712",
+  "githubActionsRun": "https://github.com/info-rbp/property-report-saas/actions/runs/41280428635",
+  "githubActionsConclusion": "success",
+  "localTests": {"total": 102, "passed": 102, "failed": 0, "skipped": 0},
+  "hostedRegressionStep": "passed",
   "pdfFixtures": 27,
+  "selectableReportTypesRendered": 24,
   "typecheck": true,
   "frontendAndRendererBuild": true,
   "wranglerDryRun": true,
   "localWorkersRuntime": true,
-  "localBrowser": "blocked by environment policy; run in CI",
+  "localBrowser": "blocked by environment policy; no bypass attempted",
+  "githubHostedChromium": "passed",
+  "offlineEditReloadAndServerConfirmedSync": true,
+  "prescribedPdfTextCheck": true,
+  "unapprovedCommercialLaunchBlocked": true,
   "productionDeployment": false,
+  "realProviderAcceptance": false,
   "liveBilling": false,
+  "independentProductionRestoreDrill": false,
   "legalCertification": false
 }
